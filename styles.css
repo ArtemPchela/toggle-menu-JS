@@ -1,0 +1,126 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #242323;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 25px 0 50px 0;
+    flex: 0 0 auto;
+    margin: 0 55px;
+}
+
+.main-nav img {
+    position: relative;
+    width: 50px;
+    color: #ffffff;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 15px;
+}
+
+.main-nav ul li {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-items {
+    display: none;
+}
+
+.nav-items li a:hover, :focus {
+    color: darkcyan;
+    transition: 0.5s;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border: 2px solid #635d6d;
+}
+
+th {
+    padding: 15px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+td {
+    border: 2px solid #635d6d;
+    padding: 25px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 960px) {
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        margin-top: 0;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: left .8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .nav-items li a {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .main-nav ul {
+        display: none;
+    }
+
+    .toggleMenu {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background: url("menu.png") no-repeat center;
+        z-index: 11;
+        transition: 0.7s ease;
+    }
+
+    .toggleMenu:hover {
+        color: darkcyan;
+    }
+
+    .toggleMenu.active {
+        background: url("close.png") center no-repeat;
+        transition: 0.7s ease;
+    }
+
+}
